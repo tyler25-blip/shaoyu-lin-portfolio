@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shao-Yu Lin — UX & Interaction Designer</title>
+  <meta name="description" content="Portfolio of Shao-Yu Lin (Tyler) — UX and interaction designer based in Munich, bridging industrial design, HCI, and AI-driven experiences." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <!-- Ambient background layers -->
+  <div class="ambient"></div>
+  <div class="blob blob--peach"></div>
+  <div class="blob blob--sage"></div>
+  <div class="blob blob--gold"></div>
+  <div class="ambient-noise"></div>
+  <div class="cursor-orb" aria-hidden="true"></div>
+
+  <!-- Nav -->
+  <nav class="nav glass glass--pill">
+    <a href="#top" class="nav__brand">Shao-Yu <span>·</span> Tyler</a>
+    <div class="nav__links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="nav__cta" data-magnetic="0.2">Let's talk</a>
+  </nav>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero wrap">
+      <div class="hero__canvas" aria-hidden="true">
+        <img src="assets/images/bg-hero.png" alt="" />
+      </div>
+
+      <div class="hero__inner">
+        <div class="hero__card glass glass--xl reveal">
+          <div class="hero__tags">
+            <span class="hero__tag">UX</span>
+            <span class="hero__tag">Interaction</span>
+            <span class="hero__tag">HCI · AI</span>
+          </div>
+
+          <div class="hero__row">
+            <div class="hero__avatar">
+              <img src="assets/images/profile.jpg" alt="Portrait of Shao-Yu Lin" />
+            </div>
+            <div>
+              <h1 class="hero__title">Shao-Yu <em>Lin</em></h1>
+              <p class="hero__desc" style="margin-top: 0.4rem;">Tyler — designing intelligent, human experiences.</p>
+            </div>
+          </div>
+
+          <p class="hero__desc">
+            UX and interaction designer with roots in industrial design and a current focus on Human–Computer Interaction. I bridge user research, strategic thinking, and AI-driven design to craft experiences that feel intelligent yet deeply human.
+          </p>
+
+          <div class="hero__meta">
+            <div><strong>Munich, DE</strong><br />Based</div>
+            <div><strong>M.A. HCI</strong><br />TH Augsburg</div>
+            <div><strong>iF · Golden Pin · IDA</strong><br />Award winning</div>
+          </div>
+
+          <div class="hero__actions">
+            <a href="#work" class="btn btn--primary" data-magnetic="0.2">
+              View selected work <span class="btn__arrow">→</span>
+            </a>
+            <a href="#contact" class="btn btn--ghost" data-magnetic="0.2">
+              Get in touch
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Work -->
+    <section class="section" id="work">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <div>
+            <p class="eyebrow">Selected Work · 2023 — 2025</p>
+            <h2>Eight projects that<br />shaped how I design.</h2>
+          </div>
+          <p class="lede">
+            A mix of interaction, UI, and industrial design — spanning service concepts, exhibition installations, and speculative products. Each piece chased the same question: how can design feel intelligent and still stay human?
+          </p>
+        </header>
+
+        <div class="projects">
+          <a class="project-card reveal" href="projects/ecotrapod.html" data-delay="1">
+            <img src="assets/images/projects/ecotrapod/cover.png" alt="Ecotrapod — coastal regeneration module" loading="lazy" />
+            <div class="project-card__shade"></div>
+            <div class="project-card__pill">↗</div>
+            <div class="project-card__body">
+              <div class="project-card__num">— 01</div>
+              <h3 class="project-card__title">Ecotrapod</h3>
+              <div class="project-card__meta">
+                <span>Product</span><span>Sustainability</span><span>2024</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="project-card reveal" href="projects/lively.html" data-delay="2">
+            <img src="assets/images/projects/lively/cover.png" alt="Lively — wellness companion" loading="lazy" />
+            <div class="project-card__shade"></div>
+            <div class="project-card__pill">↗</div>
+            <div class="project-card__body">
+              <div class="project-card__num">— 02</div>
+              <h3 class="project-card__title">Lively</h3>
+              <div class="project-card__meta">
+                <span>UI</span><span>Mobile</span><span>2023</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="project-card reveal" href="projects/hikari.html" data-delay="3">
+            <img src="assets/images/projects/hikari/cover.png" alt="Hikari — stress-relief service for Gen Z" loading="lazy" />
+            <div class="project-card__shade"></div>
+            <div class="project-card__pill">↗</div>
+            <div class="project-card__body">
+              <div class="project-card__num">— 03</div>
+              <h3 class="project-card__title">Hikari</h3>
+              <div class="project-card__meta">
+                <span>UI / UX</span><span>Service</span><span>2025</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="project-card reveal" href="projects/lightfull.html" data-delay="1">
+            <img src="assets/images/projects/lightfull/cover.png" alt="Lightfull — interactive cybersecurity wall" loading="lazy" />
+            <div class="project-card__shade"></div>
+            <div class="project-card__pill">↗</div>
+            <div class="project-card__body">
+              <div class="project-card__num">— 04</div>
+              <h3 class="project-card__title">Lightfull Studio</h3>
+              <div class="project-card__meta">
+                <span>UI</span><span>Installation</span><span>2024</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="project-card reveal" href="projects/trash-to-treasure.html" data-delay="2">
+            <img src="assets/images/projects/trash-to-treasure/cover.png" alt="Trash To Treasure — upcycled material project" loading="lazy" />
+            <div class="project-card__shade"></div>
+            <div class="project-card__pill">↗</div>
+            <div class="project-card__body">
+              <div class="project-card__num">— 05</div>
+              <h3 class="project-card__title">Trash To Treasure</h3>
+              <div class="project-card__meta">
+                <span>Product</span><span>Sustainability</span><span>2025</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="project-card reveal" href="projects/viewsonic.html" data-delay="3">
+            <img src="assets/images/projects/viewsonic/cover.png" alt="ViewSonic — global marketing visuals" loading="lazy" />
+            <div class="project-card__shade"></div>
+            <div class="project-card__pill">↗</div>
+            <div class="project-card__body">
+              <div class="project-card__num">— 06</div>
+              <h3 class="project-card__title">ViewSonic</h3>
+              <div class="project-card__meta">
+                <span>UI</span><span>Graphic</span><span>2023</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="project-card reveal" href="projects/ecoshell-track.html" data-delay="1">
+            <img src="assets/images/projects/ecoshell-track/cover.png" alt="Ecoshell Track — biodegradable outdoor tracker" loading="lazy" />
+            <div class="project-card__shade"></div>
+            <div class="project-card__pill">↗</div>
+            <div class="project-card__body">
+              <div class="project-card__num">— 07</div>
+              <h3 class="project-card__title">Ecoshell Track</h3>
+              <div class="project-card__meta">
+                <span>Product</span><span>Outdoor</span><span>2024</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="project-card reveal" href="projects/pangolin.html" data-delay="2">
+            <img src="assets/images/projects/pangolin/cover.png" alt="Pangolin — outdoor backpack UX research" loading="lazy" />
+            <div class="project-card__shade"></div>
+            <div class="project-card__pill">↗</div>
+            <div class="project-card__body">
+              <div class="project-card__num">— 08</div>
+              <h3 class="project-card__title">Pangolin</h3>
+              <div class="project-card__meta">
+                <span>Product</span><span>UX Research</span><span>2024</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About + Awards -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="about">
+          <div class="about__text glass reveal">
+            <p class="eyebrow">About</p>
+            <h2>Design that feels intelligent yet deeply human.</h2>
+            <p>
+              I'm Tyler — a Taiwanese designer based in Munich, now studying Interactive Media Systems with an HCI focus at TH Augsburg. My path began in industrial design at Taiwan Tech, turned toward UX during a design exchange in Munich, and keeps leaning into the space where AI, interaction, and craft quietly meet.
+            </p>
+            <p>
+              Across Taiwan, Germany, and cross-cultural teams, I've worked the full arc of the design process — from user interviews and empathy mapping, through rapid prototyping, to production-ready UI and motion. I care about strategy as much as pixels: why something is made, and how it can feel effortless once it reaches someone.
+            </p>
+            <p>
+              Outside of projects, I like quiet trails, slow coffee, and the kind of objects that become friends over time.
+            </p>
+          </div>
+
+          <aside class="about__side">
+            <div class="awards glass reveal" data-delay="1">
+              <h3>Awards</h3>
+              <ul>
+                <li>iF Student Design Award <span>2023 · 2024</span></li>
+                <li>Golden Pin — Best of the Year <span>2024</span></li>
+                <li>IDA Design Award — Gold <span>2024</span></li>
+                <li>Architecture Master Prize — Best of the Year <span>2024</span></li>
+              </ul>
+            </div>
+
+            <div class="awards glass reveal" data-delay="2">
+              <h3>Education</h3>
+              <ul>
+                <li>M.A. Interactive Media Systems — HCI <span>TH Augsburg · 2026 →</span></li>
+                <li>Design Exchange — AI-driven design <span>HM München · 24–25</span></li>
+                <li>B.A. Industrial Design <span>NTUST · 20–25</span></li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+
+        <!-- Experience -->
+        <header class="section__head reveal" style="margin-top: 5rem;">
+          <div>
+            <p class="eyebrow">Experience</p>
+            <h2>Recent work experience</h2>
+          </div>
+          <p class="lede">
+            Three roles across Taiwan — from global marketing visuals at ViewSonic, to UX research at Pangolin, to UI for exhibition-scale installations with Lightfull Studio.
+          </p>
+        </header>
+
+        <div class="exp">
+          <div class="exp-row glass glass--sm reveal">
+            <div class="exp-row__time">Jul 2023 — Jan 2026</div>
+            <div class="exp-row__role">
+              UI Designer
+              <small>Lightfull Studio — gaming UI, interactive wall for a cybersecurity exhibition</small>
+            </div>
+            <div class="exp-row__place">Taipei · Remote</div>
+          </div>
+          <div class="exp-row glass glass--sm reveal" data-delay="1">
+            <div class="exp-row__time">Mar 2024 — Aug 2024</div>
+            <div class="exp-row__role">
+              Product Design Intern (UX)
+              <small>Pangolin — early-stage research and prototyping for outdoor backpack line</small>
+            </div>
+            <div class="exp-row__place">Taipei</div>
+          </div>
+          <div class="exp-row glass glass--sm reveal" data-delay="2">
+            <div class="exp-row__time">Jul 2023 — Dec 2023</div>
+            <div class="exp-row__role">
+              Graphic Design Intern
+              <small>ViewSonic — digital marketing assets and regionally-adapted UI</small>
+            </div>
+            <div class="exp-row__place">New Taipei</div>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <header class="section__head reveal" style="margin-top: 5rem;">
+          <div>
+            <p class="eyebrow">Toolkit</p>
+            <h2>Fluent in research, pixels, and the bits in between.</h2>
+          </div>
+        </header>
+
+        <div class="skills">
+          <div class="skill-card glass reveal">
+            <h3>Design</h3>
+            <ul>
+              <li>Figma</li><li>Framer</li><li>Adobe CC</li><li>Rhino</li><li>KeyShot</li><li>CAD</li><li>3D Printing</li>
+            </ul>
+          </div>
+          <div class="skill-card glass reveal" data-delay="1">
+            <h3>UX Methods</h3>
+            <ul>
+              <li>User Research</li><li>Usability Testing</li><li>Empathy Mapping</li><li>Personas</li><li>Journey Mapping</li><li>IA</li><li>Prototyping</li>
+            </ul>
+          </div>
+          <div class="skill-card glass reveal" data-delay="2">
+            <h3>Development</h3>
+            <ul>
+              <li>HTML</li><li>CSS</li><li>JavaScript</li><li>AI-assisted Dev</li>
+            </ul>
+          </div>
+          <div class="skill-card glass reveal" data-delay="3">
+            <h3>Languages</h3>
+            <ul>
+              <li>Mandarin — native</li><li>English — C1</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="contact glass glass--xl reveal">
+          <p class="eyebrow">Let's make something</p>
+          <h2>A calm conversation,<br />over coffee or over pixels.</h2>
+          <p class="lede" style="max-width: 48ch; margin: 0 auto 1.5rem;">
+            Currently in Munich — open to full-time roles, freelance briefs, and interesting collaborations in UX, HCI, and AI-driven design.
+          </p>
+          <a href="mailto:shaoyu.tyler@gmail.com" class="contact__email" data-magnetic="0.15" data-copy-email="shaoyu.tyler@gmail.com">
+            shaoyu.tyler@gmail.com <span aria-hidden="true">→</span>
+          </a>
+          <div class="contact__links">
+            <a href="https://www.linkedin.com/in/shao-yu-lin-tyler25" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="tel:+4915129854581">+49 151 29854581</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© 2026 Shao-Yu Lin · Designed &amp; built in Munich</p>
+    </footer>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
