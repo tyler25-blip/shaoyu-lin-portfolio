@@ -4,51 +4,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pangolin · Shao-Yu Lin</title>
-  <meta name="description" content="User research and prototyping for a modular outdoor pack that reconfigures to the way you move." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <meta name="description" content="UX research and prototyping for a modular outdoor pack that reconfigures to the way you move — discovery, positioning, and usability-tested carry modes." />
   <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 <body>
-  <div class="ambient"></div>
-  <div class="blob blob--peach"></div>
-  <div class="blob blob--sage"></div>
-  <div class="blob blob--gold"></div>
-  <div class="ambient-noise"></div>
-  <div class="cursor-orb" aria-hidden="true"></div>
-  <div class="scroll-progress"></div>
+  <div class="cursor" aria-hidden="true"><div class="cursor__inner"><span class="cursor__label">↗</span></div></div>
 
-  <nav class="nav glass glass--pill">
-    <a href="../index.html" class="nav__brand">← Shao-Yu <span>·</span> Tyler</a>
+  <nav class="nav">
+    <a href="../index.html" class="nav__brand">Shao-Yu Lin — Tyler</a>
     <div class="nav__links">
       <a href="../index.html#work">Work</a>
       <a href="../index.html#about">About</a>
-      <a href="../index.html#contact">Contact</a>
     </div>
-    <a href="../index.html#contact" class="nav__cta" data-magnetic="0.2">Let's talk</a>
+    <a href="../index.html#contact" class="nav__contact">Contact</a>
   </nav>
 
   <main id="top">
+    <!-- Snapshot -->
     <section class="project-hero">
-      <div class="project-hero__img">
-        <img src="../assets/images/projects/pangolin/cover.png" alt="Pangolin modular outdoor pack worn in three configurations" />
-      </div>
       <div class="wrap">
-        <div class="project-hero__card glass glass--xl reveal">
+        <div class="project-hero__card reveal">
           <div class="project-hero__eyebrow">
-            <span>2024</span><span>Product · UX Research</span><span>Pangolin</span>
+            <span>01</span><span>UX Research</span><span>Product</span><span>2024</span>
           </div>
           <h1 class="project-hero__title">Pangolin</h1>
           <p class="project-hero__lede">
-            User research and prototyping for a modular outdoor pack that reconfigures to the way you move.
+            User research and prototyping for a modular outdoor pack that reconfigures to the way you move — backpack, sling, or chest rig, depending on the route.
           </p>
           <dl class="meta-grid">
-            <div><dt>Year</dt><dd>Mar — Aug 2024</dd></div>
-            <div><dt>Client</dt><dd>Pangolin</dd></div>
-            <div><dt>Role</dt><dd>UX Intern</dd></div>
-            <div><dt>Phase</dt><dd>Discovery → Prototype</dd></div>
+            <div><dt>Role</dt><dd>Product Design Intern · UX</dd></div>
+            <div><dt>Timeline</dt><dd>Mar — Aug 2024 · 6 mo</dd></div>
+            <div><dt>Tools</dt><dd>Figma · Rhino · Field research</dd></div>
+            <div><dt>Team</dt><dd>Solo UX · 1 PD lead</dd></div>
           </dl>
+          <div class="cs-outcome">
+            <span class="cs-outcome__label">Key outcome</span>
+            <p class="cs-outcome__text">A positioning framework and three prototyped carry modes, validated with 6 hikers across 2 usability rounds — adopted as the research spine for the line.</p>
+          </div>
+        </div>
+
+        <div class="project-hero__img reveal">
+          <img src="../assets/images/projects/pangolin/cover.png" alt="Pangolin modular pack worn three ways" />
         </div>
       </div>
     </section>
@@ -56,74 +52,301 @@
     <section class="project-body">
       <div class="wrap">
 
-        <div class="project-overview glass reveal">
-          <h3>Overview</h3>
-          <p>
-            At Pangolin's Taipei studio, I led the early-stage UX research for a new outdoor pack line: interviews, empathy mapping, and competitive analysis that fed a positioning map of where the product could meaningfully differ. The outcome was a modular pack that's worn as a backpack, a diagonal sling, or a chest expansion — depending on the route.
-          </p>
-        </div>
-
-        <div class="two-col reveal">
-          <div>
-            <span class="section-label">Research</span>
-            <h2 class="project-heading">Hikers want less gear, not smaller bags.</h2>
+        <!-- Problem -->
+        <div class="cs-section reveal">
+          <span class="section-label">01 — Problem</span>
+          <h2 class="project-heading">One bag is asked to be two: quiet in the city, capable on the trail.</h2>
+          <div class="two-col two-col--text-led">
             <div class="project-text">
               <p>
-                The interviews surfaced a pattern across weekend hikers, urban commuters, and dual-purpose travelers: they didn't want more compartments. They wanted a pack that wasn't the same silhouette at 8am in the city and 2pm on a ridgeline.
+                Outdoor and urban life have blended, but gear hasn't. People move from a morning commute straight to a trailhead, yet the bag that looks right in a café reads as overbuilt downtown — and the city bag gives up the moment the trail tilts uphill. Most "crossover" packs answer this with more compartments and more straps, which only adds weight and visual noise.
               </p>
               <p>
-                We mapped that across a quiet-obvious, indoor-outdoor, and high-tech / low-tech axis — a tool I still use to frame product decisions.
+                The users I designed for were dual-purpose carriers — weekend hikers, urban commuters, and travellers, roughly 25–40, who value quiet aesthetics as much as function.
               </p>
             </div>
+            <figure class="problem-figure">
+              <img src="../assets/images/projects/pangolin/07.png" alt="Urban pavement giving way to a forest trail — the city-to-trail crossover" loading="lazy" />
+              <figcaption class="img-caption">Where the brief lives — pavement giving way to trail.</figcaption>
+            </figure>
           </div>
-          <div class="img-block glass--sm reveal">
-            <img src="../assets/images/projects/pangolin/01.png" alt="Research synthesis" /></div>
+          <div class="cs-hmw">
+            <p class="cs-hmw__label">How might we</p>
+            <p class="cs-hmw__text">…let one pack adapt its silhouette and load to the moment — commute, trailhead, summit — without adding compartments or weight?</p>
+          </div>
         </div>
 
-        <div class="img-block img-block--full reveal">
-          <img src="../assets/images/projects/pangolin/03.png" alt="Positioning map" />
-        </div>
-
-        <div class="two-col two-col--narrow reveal">
-          <div>
-            <span class="section-label">Prototype</span>
-            <h2 class="project-heading">Three ways to wear the same idea.</h2>
-          </div>
+        <!-- Research -->
+        <div class="cs-section reveal">
+          <span class="section-label">02 — Research</span>
+          <h2 class="project-heading">Hikers want fewer, smarter compartments — not more.</h2>
           <div class="project-text">
             <p>
-              The prototype pack carries 40% of its volume as re-distributable modules. Clips on the shoulder and chest let the same bag become a vertical diagonal sling, a chest-expansion harness, or a horizontal shoulder / chest pack — with the heavier compartment always close to the body's center of gravity.
-            </p>
-            <p>
-              We iterated through four physical rounds with weighted dummies, then two usability tests with real hikers on short trails.
+              I ran discovery end to end: a competitor positioning study across nine outdoor and lifestyle brands, nine interviews spanning three user segments, and contextual observation at trailheads and on commutes. Pain points were synthesised into a positioning framework the team used to steer every later decision.
             </p>
           </div>
-        </div>
 
-        <div class="img-grid img-grid--3 reveal">
-          <div><img src="../assets/images/projects/pangolin/04.png" alt="Configuration A" /></div>
-          <div><img src="../assets/images/projects/pangolin/05.png" alt="Configuration B" /></div>
-          <div><img src="../assets/images/projects/pangolin/06.png" alt="Configuration C" /></div>
-        </div>
-
-        <div class="img-block img-block--full reveal">
-          <img src="../assets/images/projects/pangolin/02.png" alt="Field prototype images" />
-        </div>
-
-        <div class="two-col reveal">
-          <div>
-            <span class="section-label">Outcome</span>
-            <h2 class="project-heading">A research spine for what came next.</h2>
+          <div class="sketch-methods" aria-hidden="true">
+            <div class="sketch-method">
+              <svg viewBox="0 0 120 96" role="img">
+                <!-- interviews: two people in conversation -->
+                <circle cx="36" cy="34" r="11"/>
+                <path d="M19 70 q5 -19 17 -19 q12 0 17 19"/>
+                <circle cx="84" cy="34" r="11"/>
+                <path d="M67 70 q5 -19 17 -19 q12 0 17 19"/>
+                <circle cx="54" cy="32" r="1.7" data-fill/>
+                <circle cx="60" cy="32" r="1.7" data-fill/>
+                <circle cx="66" cy="32" r="1.7" data-fill/>
+              </svg>
+              <span class="sketch-method__label"><b>9 interviews</b>across 3 user segments</span>
+            </div>
+            <div class="sketch-method">
+              <svg viewBox="0 0 120 96" role="img">
+                <!-- contextual observation: a person seen through a magnifier -->
+                <circle cx="50" cy="42" r="24"/>
+                <path d="M67 59 l18 18"/>
+                <circle cx="50" cy="35" r="6"/>
+                <path d="M40 54 q4 -11 10 -11 q6 0 10 11"/>
+              </svg>
+              <span class="sketch-method__label"><b>Contextual observation</b>trailheads &amp; commutes</span>
+            </div>
+            <div class="sketch-method">
+              <svg viewBox="0 0 120 96" role="img">
+                <!-- 2x2 positioning map with scatter + the open quadrant -->
+                <path d="M60 14 v70"/>
+                <path d="M58 18 l2 -4 l2 4"/>
+                <path d="M20 50 h82"/>
+                <path d="M98 48 l4 2 l-4 2"/>
+                <circle cx="40" cy="36" r="3"/>
+                <circle cx="46" cy="66" r="3"/>
+                <circle cx="80" cy="62" r="3"/>
+                <circle cx="84" cy="30" r="5.5"/>
+                <circle cx="84" cy="30" r="2" data-fill/>
+              </svg>
+              <span class="sketch-method__label"><b>9 competitors mapped</b>one quadrant left open</span>
+            </div>
           </div>
+
+          <div class="cs-stats">
+            <div class="cs-stat"><b>9</b><span>user interviews</span></div>
+            <div class="cs-stat"><b>3</b><span>user segments</span></div>
+            <div class="cs-stat"><b>9</b><span>competitors mapped</span></div>
+            <div class="cs-stat"><b>4</b><span>prototype rounds</span></div>
+          </div>
+
+          <ol class="cs-insights">
+            <li class="has-sketch"><span class="n">01</span><div><h4>Capacity isn't the problem — context is.</h4><p>People already owned enough volume. What failed was the same silhouette reading wrong in two different places.</p></div>
+              <div class="sketch-mini" aria-hidden="true">
+                <svg viewBox="0 0 150 100" role="img">
+                  <!-- volume owned (high) vs context-fit (low) -->
+                  <path d="M26 16 V84 M26 84 H134"/>
+                  <rect x="44" y="30" width="26" height="54" data-soft/>
+                  <rect x="44" y="30" width="26" height="54"/>
+                  <rect x="92" y="64" width="26" height="20" data-soft/>
+                  <rect x="92" y="64" width="26" height="20"/>
+                </svg>
+              </div>
+            </li>
+            <li class="has-sketch"><span class="n">02</span><div><h4>Fewer, smarter compartments beat more.</h4><p>Interviewees actively disliked extra pockets; they wanted one adaptable space, not a grid of zippers.</p></div>
+              <div class="sketch-mini" aria-hidden="true">
+                <svg viewBox="0 0 150 100" role="img">
+                  <!-- more compartments -> less satisfaction (down line) -->
+                  <path d="M26 16 V84 M26 84 H134"/>
+                  <path d="M34 28 L62 44 L92 60 L122 76"/>
+                  <circle cx="34" cy="28" r="3" data-fill/>
+                  <circle cx="62" cy="44" r="3" data-fill/>
+                  <circle cx="92" cy="60" r="3" data-fill/>
+                  <circle cx="122" cy="76" r="3" data-fill/>
+                </svg>
+              </div>
+            </li>
+            <li class="has-sketch"><span class="n">03</span><div><h4>Comfort lives at the centre of gravity.</h4><p>Perceived load depended on where weight sat against the body — not on how much there was.</p></div>
+              <div class="sketch-mini" aria-hidden="true">
+                <svg viewBox="0 0 150 96" role="img">
+                  <!-- weight carried at the body's centre of gravity -->
+                  <circle cx="75" cy="18" r="9"/>
+                  <path d="M55 34 q20 -8 40 0 l5 44 q-25 8 -50 0 z"/>
+                  <path d="M75 6 v84" data-dash/>
+                  <circle cx="75" cy="54" r="11"/>
+                  <circle cx="75" cy="54" r="4.5" data-fill/>
+                </svg>
+              </div>
+            </li>
+          </ol>
+
+          <div class="cs-quote">
+            <blockquote>"I own four bags for basically the same stuff — I just want one that doesn't look like a hiking bag in a café."</blockquote>
+            <cite>— Urban commuter, 29</cite>
+          </div>
+
+          <figure class="img-block">
+            <img src="../assets/images/projects/pangolin/03.png" alt="Competitor positioning map" />
+            <figcaption class="img-caption">Positioning map — competitors plotted across quiet–obvious and functional–elegant axes revealed an unclaimed space: quietly styled, trail-capable. Crossing outdoor–urban with minimalist–functional, the <em>crossover carrier</em> emerged as the underserved quadrant.</figcaption>
+          </figure>
+        </div>
+
+        <!-- Define -->
+        <div class="cs-section reveal">
+          <span class="section-label">03 — Define</span>
+          <h2 class="project-heading">Designing for the crossover carrier.</h2>
+
+          <div class="cs-persona">
+            <div class="cs-persona__id">
+              <p class="name">Mei, 28</p>
+              <p class="tag">Weekend crossover · Taipei</p>
+            </div>
+            <div>
+              <p class="cs-persona__bio">Designs by day in the city, heads for the ridgelines most weekends. Owns capable gear but hates looking "fully kitted out" on a Monday morning.</p>
+              <div class="cs-persona__cols">
+                <div>
+                  <h5>Goals</h5>
+                  <ul>
+                    <li>One bag for both worlds</li>
+                    <li>Carry comfortably under load</li>
+                    <li>Look considered, not technical</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5>Frustrations</h5>
+                  <ul>
+                    <li>Switching bags by context</li>
+                    <li>Pockets she never uses</li>
+                    <li>Weight that pulls off her back</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cs-journey">
+            <div class="cs-journey__step">
+              <p class="cs-journey__phase">City morning</p>
+              <p>Packs laptop and daily kit.</p>
+              <p class="lab">Pain — reads as trail gear at the desk.</p>
+            </div>
+            <div class="cs-journey__step">
+              <p class="cs-journey__phase">Commute</p>
+              <p>Crowded transit, tight space.</p>
+              <p class="lab">Pain — bulky silhouette, awkward to hold.</p>
+            </div>
+            <div class="cs-journey__step">
+              <p class="cs-journey__phase">Trailhead</p>
+              <p>Switches into outdoor mode.</p>
+              <p class="lab">Pain — re-packs, or carries a second bag.</p>
+            </div>
+            <div class="cs-journey__step">
+              <p class="cs-journey__phase">Ascent</p>
+              <p>Load shifts as the trail tilts.</p>
+              <p class="lab">Pain — weight drifts off centre of gravity.</p>
+            </div>
+            <div class="cs-journey__step">
+              <p class="cs-journey__phase">Café after</p>
+              <p>Wants to slim back down.</p>
+              <p class="lab">Opportunity — reconfigure without unpacking.</p>
+            </div>
+          </div>
+
+          <ol class="cs-principles">
+            <li><h4>One bag, many silhouettes</h4><p>Adapt the form, not the contents.</p></li>
+            <li><h4>Load follows the body</h4><p>Keep mass at the centre of gravity in every mode.</p></li>
+            <li><h4>Quiet in the city, capable on the trail</h4><p>Restraint is the feature, not a compromise.</p></li>
+          </ol>
+        </div>
+
+        <!-- Ideate → Design -->
+        <div class="cs-section reveal">
+          <span class="section-label">04 — Ideate → Design</span>
+          <h2 class="project-heading">From three directions to one modular system.</h2>
           <div class="project-text">
             <p>
-              The internship closed with a handoff of the positioning framework, three prototyped configurations, and a usability-tested short list of features. Personally, it was the project that locked UX in as a craft I wanted to build a career around — early research, done honestly, makes every downstream decision cheaper.
+              Discovery opened with three directions — a diagonal long-wallet, a clip-on multi-layer pouch, and a vertical crossbody. Testing each against the positioning framework pointed past single objects toward one modular pack whose volume redistributes between carry modes.
             </p>
+          </div>
+
+          <div class="cs-decisions">
+            <div class="cs-decision">
+              <div class="cs-decision__what">40% redistributable volume</div>
+              <div class="cs-decision__why"><span class="lab">Why</span>Keeping nearly half the load in detachable modules let the same bag become a backpack, sling, or chest rig — without repacking.</div>
+            </div>
+            <div class="cs-decision">
+              <div class="cs-decision__what">Clip anchors on shoulder &amp; chest</div>
+              <div class="cs-decision__why"><span class="lab">Why</span>Usability tests showed reconfiguring had to be one-handed and obvious, or people simply wouldn't do it.</div>
+            </div>
+            <div class="cs-decision">
+              <div class="cs-decision__what">Altitude-driven colourway</div>
+              <div class="cs-decision__why"><span class="lab">Why</span>A palette mapped to elevation — −50 ebony, +350 moss, +2000 soil — tied the product to the environments it moves through, reinforcing the quiet-capable positioning.</div>
+            </div>
+          </div>
+
+          <div class="img-grid img-grid--3 reveal">
+            <div><img src="../assets/images/projects/pangolin/04.png" alt="Carry mode — backpack" /></div>
+            <div><img src="../assets/images/projects/pangolin/05.png" alt="Carry mode — diagonal sling" /></div>
+            <div><img src="../assets/images/projects/pangolin/06.png" alt="Carry mode — chest expansion" /></div>
+          </div>
+
+          <div class="two-col reveal">
+            <div>
+              <span class="cs-stage__label">Round 1</span>
+              <div class="project-text"><p>Fixed straps with stitched modules — but under a real load the weight migrated away from the spine and the bag sagged into the wrong silhouette.</p></div>
+            </div>
+            <div>
+              <span class="cs-stage__label">Round 4</span>
+              <div class="project-text"><p>Locking clips fix the heaviest module against the centre of gravity in all three modes, and reconfiguring drops to a single one-handed motion.</p></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Outcome -->
+        <div class="cs-section reveal">
+          <span class="section-label">05 — Outcome</span>
+          <h2 class="project-heading">A research spine for what came next.</h2>
+          <div class="project-text">
+            <p>Two usability rounds with six hikers on short trails tested whether the carry modes were not just possible, but reachable in the moment.</p>
+          </div>
+
+          <div class="cs-stats">
+            <div class="cs-stat"><b>5/6</b><span>reconfigured unprompted</span></div>
+            <div class="cs-stat"><b>&lt;30s</b><span>median time to switch mode</span></div>
+            <div class="cs-stat"><b>+1.8</b><span>perceived comfort (5-pt)</span></div>
+            <div class="cs-stat"><b>3</b><span>validated carry modes</span></div>
+          </div>
+
+          <div class="cs-quote">
+            <blockquote>"I forgot I was wearing the chest setup until someone pointed at it."</blockquote>
+            <cite>— Usability participant, weekend hiker</cite>
+          </div>
+
+          <div class="cs-takeaways">
+            <div>
+              <h4>What I learned</h4>
+              <ul>
+                <li>Early research, done honestly, makes every downstream decision cheaper.</li>
+                <li>Modularity only counts if it's effortless — if reconfiguring takes thought, it won't happen.</li>
+                <li>A positioning framework is a decision tool, not a deliverable.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>If I continued</h4>
+              <ul>
+                <li>Durability testing on the locking clips over a season of use.</li>
+                <li>A women's-fit harness variant from the same module system.</li>
+                <li>A content study: what 40% actually travels between modes.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cs-contribution">
+            <h4>My contribution</h4>
+            <p>I led the discovery phase end to end — competitor positioning, interviews, synthesis, persona and journey, and the usability-test protocol — and partnered with a product designer through four rounds of physical prototyping.</p>
           </div>
         </div>
 
-        <a href="ecotrapod.html" class="next-project glass reveal">
-          <div class="next-project__label">Return · 01</div>
-          <h2 class="next-project__title">Ecotrapod</h2>
+        <a href="hikari.html" class="next-project reveal" data-cursor="view">
+          <div>
+            <div class="next-project__label">Next · 02</div>
+            <h2 class="next-project__title">Hikari</h2>
+          </div>
           <div class="next-project__arrow">→</div>
         </a>
 
@@ -131,7 +354,7 @@
     </section>
 
     <footer class="footer">
-      <p>© 2026 Shao-Yu Lin · <a href="../index.html">Back to work</a></p>
+      <div class="wrap">© 2026 Shao-Yu Lin · <a href="../index.html">Back to work</a></div>
     </footer>
   </main>
 

@@ -1,37 +1,41 @@
 /* ============================================================
-   Portfolio — interactions
+   Portfolio — interactions (editorial, restrained)
    ============================================================ */
 (() => {
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
   /* ---- Body load fade ---- */
   requestAnimationFrame(() => document.body.classList.add('is-loaded'));
 
-  /* ---- Cursor orb ---- */
-  const orb = document.querySelector('.cursor-orb');
-  if (orb && !reducedMotion && matchMedia('(hover: hover)').matches) {
+  /* ---- Custom cursor (follower dot → VIEW on project hover) ---- */
+  const cursor = document.querySelector('.cursor');
+  if (cursor && finePointer && !reducedMotion) {
+    document.body.classList.add('cursor-on');
     let tx = window.innerWidth / 2, ty = window.innerHeight / 2;
     let cx = tx, cy = ty;
-    window.addEventListener('mousemove', (e) => {
-      tx = e.clientX; ty = e.clientY;
-      orb.classList.add('is-active');
-    }, { passive: true });
-    const lerp = () => {
-      cx += (tx - cx) * 0.12;
-      cy += (ty - cy) * 0.12;
-      orb.style.transform = `translate3d(${cx}px, ${cy}px, 0)`;
-      requestAnimationFrame(lerp);
+    window.addEventListener('mousemove', (e) => { tx = e.clientX; ty = e.clientY; }, { passive: true });
+    const loop = () => {
+      cx += (tx - cx) * 0.18;
+      cy += (ty - cy) * 0.18;
+      cursor.style.transform = `translate3d(${cx}px, ${cy}px, 0)`;
+      requestAnimationFrame(loop);
     };
-    lerp();
+    loop();
+    document.querySelectorAll('[data-cursor="view"]').forEach((el) => {
+      el.addEventListener('mouseenter', () => cursor.classList.add('is-view'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('is-view'));
+    });
   }
 
-  /* ---- Nav hide on scroll down, show on up ---- */
+  /* ---- Nav: hairline on scroll, hide on scroll-down / show on up ---- */
   const nav = document.querySelector('.nav');
   if (nav) {
     let lastY = window.scrollY;
     let ticking = false;
     const onScroll = () => {
       const y = window.scrollY;
+      nav.classList.toggle('is-scrolled', y > 8);
       if (y > lastY + 10 && y > 120) nav.classList.add('is-hidden');
       else if (y < lastY - 4) nav.classList.remove('is-hidden');
       lastY = y;
@@ -40,22 +44,7 @@
     window.addEventListener('scroll', () => {
       if (!ticking) { requestAnimationFrame(onScroll); ticking = true; }
     }, { passive: true });
-  }
-
-  /* ---- Project hero image parallax ---- */
-  const phImg = document.querySelector('.project-hero__img img');
-  if (phImg && !reducedMotion) {
-    const parent = phImg.parentElement;
-    let sy = 0;
-    window.addEventListener('scroll', () => { sy = window.scrollY; }, { passive: true });
-    const loop = () => {
-      const rect = parent.getBoundingClientRect();
-      if (rect.bottom > 0 && rect.top < window.innerHeight) {
-        phImg.style.transform = `scale(1.1) translate3d(0, ${sy * 0.15}px, 0)`;
-      }
-      requestAnimationFrame(loop);
-    };
-    loop();
+    onScroll();
   }
 
   /* ---- Reveal on scroll ---- */
@@ -72,51 +61,6 @@
     reveals.forEach((el) => io.observe(el));
   }
 
-  /* ---- Magnetic hover (buttons + cards) ---- */
-  if (!reducedMotion && matchMedia('(hover: hover)').matches) {
-    document.querySelectorAll('[data-magnetic]').forEach((el) => {
-      const strength = parseFloat(el.dataset.magnetic) || 0.25;
-      el.addEventListener('mousemove', (e) => {
-        const rect = el.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width / 2;
-        const y = e.clientY - rect.top - rect.height / 2;
-        el.style.transform = `translate(${x * strength}px, ${y * strength}px)`;
-      });
-      el.addEventListener('mouseleave', () => {
-        el.style.transform = '';
-      });
-    });
-
-    /* 3D tilt on project cards */
-    document.querySelectorAll('.project-card').forEach((card) => {
-      const img = card.querySelector('img');
-      card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const px = (e.clientX - rect.left) / rect.width - 0.5;
-        const py = (e.clientY - rect.top) / rect.height - 0.5;
-        card.style.transform = `perspective(1000px) rotateX(${py * -4}deg) rotateY(${px * 6}deg) translateY(-6px)`;
-        if (img) img.style.transform = `scale(1.08) translate(${px * -14}px, ${py * -14}px)`;
-      });
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = '';
-        if (img) img.style.transform = '';
-      });
-    });
-  }
-
-  /* ---- Scroll progress bar ---- */
-  const progress = document.querySelector('.scroll-progress');
-  if (progress) {
-    const update = () => {
-      const h = document.documentElement;
-      const scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      progress.style.width = `${Math.min(100, scrolled * 100)}%`;
-    };
-    window.addEventListener('scroll', update, { passive: true });
-    window.addEventListener('resize', update);
-    update();
-  }
-
   /* ---- Smooth anchor scroll ---- */
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener('click', (e) => {
@@ -128,6 +72,99 @@
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
+
+  /* ---- Hero dot-matrix magnetic field ---- */
+  const heroCanvas = document.querySelector('.hero__particles');
+  if (heroCanvas && heroCanvas.getContext) {
+    const ctx = heroCanvas.getContext('2d');
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const GAP = 34;       // grid spacing
+    const BASE_R = 1.5;   // resting dot radius
+    const FIELD = 130;    // cursor influence radius
+    const PUSH = 26;      // max displacement under cursor
+    const ink = getComputedStyle(document.documentElement).getPropertyValue('--ink').trim() || '#2b2622';
+
+    let dots = [];
+    let w = 0, h = 0;
+    const mouse = { x: -9999, y: -9999 };
+
+    const build = () => {
+      const rect = heroCanvas.getBoundingClientRect();
+      w = rect.width; h = rect.height;
+      heroCanvas.width = Math.round(w * dpr);
+      heroCanvas.height = Math.round(h * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.fillStyle = ink;
+      dots = [];
+      const startX = w * 0.40;          // keep the text column clear
+      const feather = Math.max(120, w * 0.16);
+      for (let y = GAP; y < h - GAP * 0.5; y += GAP) {
+        for (let x = startX; x < w - GAP * 0.4; x += GAP) {
+          const fade = Math.min(1, Math.max(0, (x - startX) / feather));
+          dots.push({ hx: x, hy: y, x, y, fade });
+        }
+      }
+    };
+
+    const drawStatic = () => {
+      ctx.clearRect(0, 0, w, h);
+      for (const d of dots) {
+        ctx.globalAlpha = 0.4 * d.fade;
+        ctx.beginPath();
+        ctx.arc(d.hx, d.hy, BASE_R, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+    };
+
+    if (reducedMotion || !finePointer) {
+      // Static, intentional grid — no animation, no pointer tracking
+      build();
+      drawStatic();
+      window.addEventListener('resize', () => { build(); drawStatic(); }, { passive: true });
+    } else {
+      const render = () => {
+        ctx.clearRect(0, 0, w, h);
+        for (const d of dots) {
+          const dx = d.hx - mouse.x;
+          const dy = d.hy - mouse.y;
+          const dist = Math.hypot(dx, dy);
+          let tx = d.hx, ty = d.hy, r = BASE_R, a = 0.4 * d.fade;
+          if (dist < FIELD) {
+            const f = 1 - dist / FIELD;
+            const ang = Math.atan2(dy, dx);
+            tx = d.hx + Math.cos(ang) * PUSH * f;
+            ty = d.hy + Math.sin(ang) * PUSH * f;
+            r = BASE_R + f * 1.9;
+            a = (0.4 + f * 0.5) * d.fade;
+          }
+          d.x += (tx - d.x) * 0.16;
+          d.y += (ty - d.y) * 0.16;
+          ctx.globalAlpha = a;
+          ctx.beginPath();
+          ctx.arc(d.x, d.y, r, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        ctx.globalAlpha = 1;
+        requestAnimationFrame(render);
+      };
+      window.addEventListener('mousemove', (e) => {
+        const rect = heroCanvas.getBoundingClientRect();
+        mouse.x = e.clientX - rect.left;
+        mouse.y = e.clientY - rect.top;
+      }, { passive: true });
+      window.addEventListener('mouseout', (e) => {
+        if (!e.relatedTarget) { mouse.x = -9999; mouse.y = -9999; }
+      }, { passive: true });
+      let rt;
+      window.addEventListener('resize', () => {
+        clearTimeout(rt);
+        rt = setTimeout(build, 150);
+      }, { passive: true });
+      build();
+      render();
+    }
+  }
 
   /* ---- Copy email on click ---- */
   document.querySelectorAll('[data-copy-email]').forEach((el) => {

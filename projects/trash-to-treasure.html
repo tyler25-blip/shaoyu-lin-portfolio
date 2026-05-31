@@ -3,52 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trash To Treasure · Shao-Yu Lin</title>
-  <meta name="description" content="A circular-economy companion app for kids — stories, gardens, and step-by-step guides that turn waste into wonder." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <title>Trash to Treasure · Shao-Yu Lin</title>
+  <meta name="description" content="A gamified upcycling app teaching children sustainability through making — research, personas, journey mapping, IA, and a hi-fi prototype. Team project, HM Munich." />
   <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 <body>
-  <div class="ambient"></div>
-  <div class="blob blob--peach"></div>
-  <div class="blob blob--sage"></div>
-  <div class="blob blob--gold"></div>
-  <div class="ambient-noise"></div>
-  <div class="cursor-orb" aria-hidden="true"></div>
-  <div class="scroll-progress"></div>
+  <div class="cursor" aria-hidden="true"><div class="cursor__inner"><span class="cursor__label">↗</span></div></div>
 
-  <nav class="nav glass glass--pill">
-    <a href="../index.html" class="nav__brand">← Shao-Yu <span>·</span> Tyler</a>
+  <nav class="nav">
+    <a href="../index.html" class="nav__brand">Shao-Yu Lin — Tyler</a>
     <div class="nav__links">
       <a href="../index.html#work">Work</a>
       <a href="../index.html#about">About</a>
-      <a href="../index.html#contact">Contact</a>
     </div>
-    <a href="../index.html#contact" class="nav__cta" data-magnetic="0.2">Let's talk</a>
+    <a href="../index.html#contact" class="nav__contact">Contact</a>
   </nav>
 
   <main id="top">
+    <!-- Snapshot -->
     <section class="project-hero">
-      <div class="project-hero__img">
-        <img src="../assets/images/projects/trash-to-treasure/cover.png" alt="Trash To Treasure — circular economy app key visual" />
-      </div>
       <div class="wrap">
-        <div class="project-hero__card glass glass--xl reveal">
+        <div class="project-hero__card reveal">
           <div class="project-hero__eyebrow">
-            <span>2025</span><span>Service · App</span><span>University of Applied Sciences Munich</span>
+            <span>03</span><span>UX</span><span>Mobile App</span><span>2025</span>
           </div>
-          <h1 class="project-hero__title">Trash To Treasure</h1>
+          <h1 class="project-hero__title">Trash to Treasure</h1>
           <p class="project-hero__lede">
-            A circular-economy companion for kids — stories, gardens, and step-by-step guides that turn yesterday's waste into today's wonder.
+            A gamified upcycling app that teaches children sustainability by making — turning everyday trash into keepsakes worth keeping.
           </p>
           <dl class="meta-grid">
-            <div><dt>Year</dt><dd>2025</dd></div>
-            <div><dt>Course</dt><dd>Circular Experience Design</dd></div>
-            <div><dt>Team</dt><dd>Aurelia · Maria · Tyler · Romy</dd></div>
-            <div><dt>Tools</dt><dd>Figma · Illustrator</dd></div>
+            <div><dt>Role</dt><dd>UX Designer · team of 4</dd></div>
+            <div><dt>Timeline</dt><dd>2025 · HM Munich</dd></div>
+            <div><dt>Tools</dt><dd>Figma · FigJam</dd></div>
+            <div><dt>Scope</dt><dd>Research · IA · UI</dd></div>
           </dl>
+          <div class="cs-outcome">
+            <span class="cs-outcome__label">Key outcome</span>
+            <p class="cs-outcome__text">A full UX process — 4 personas, an end-to-end journey map, user flow and IA — resolved into a gamified hi-fi prototype for children and parents.</p>
+          </div>
+        </div>
+
+        <div class="project-hero__img reveal">
+          <img src="../assets/images/projects/trash-to-treasure/cover.png" alt="Trash to Treasure — children's upcycling app overview" />
         </div>
       </div>
     </section>
@@ -56,71 +52,221 @@
     <section class="project-body">
       <div class="wrap">
 
-        <div class="project-overview glass reveal">
-          <h3>Overview</h3>
-          <p>
-            A team project from the Circular Experience Design course at HM Munich. We asked a quiet question: what would circularity feel like if it were first learned at six years old, through play, instead of at twenty-six through guilt? Our answer was a kids' app where every craft begins with something a family was about to throw away.
-          </p>
+        <!-- Problem -->
+        <div class="cs-section reveal">
+          <span class="section-label">01 — Problem</span>
+          <h2 class="project-heading">Sustainability is taught as a rule, not as something you make.</h2>
+          <div class="project-text">
+            <p>
+              Children learn environmental values mostly through instruction, while their hands — and attention — go to screens. Parents want learning that feels real and non-digital; kids want play. Recycling, framed as a chore, rarely becomes a habit that sticks.
+            </p>
+            <p>
+              We designed for children roughly 6–12 and the parents alongside them.
+            </p>
+          </div>
+          <div class="cs-hmw">
+            <p class="cs-hmw__label">How might we</p>
+            <p class="cs-hmw__text">…teach children sustainability through making — so that everyday trash becomes something worth keeping?</p>
+          </div>
         </div>
 
-        <div class="two-col reveal">
-          <div>
-            <span class="section-label">Research</span>
-            <h2 class="project-heading">Why kids? Why now?</h2>
-            <div class="project-text">
-              <p>
-                Interviews with children aged 5–12 showed that they fully understood what recycling was — but had almost no mental model of why the materials around them <em>were worth</em> recycling. Adults often skipped the "why" because the action itself felt obvious. That's exactly the gap we wanted to close.
-              </p>
-              <p>
-                So the product doesn't nag. It tells stories, hands you a flower, and asks what you'd like to build next.
-              </p>
+        <!-- Research -->
+        <div class="cs-section reveal">
+          <span class="section-label">02 — Research</span>
+          <h2 class="project-heading">We started with real lives, not the product.</h2>
+          <div class="project-text">
+            <p>
+              We interviewed children and parents, built empathy maps to capture each group's mindset, and distilled them into four personas. Crucially, we mapped the full user journey <em>without</em> our product in it — so the design would answer real needs, not assume itself.
+            </p>
+          </div>
+
+          <div class="cs-stats">
+            <div class="cs-stat"><b>2</b><span>user groups · kids &amp; parents</span></div>
+            <div class="cs-stat"><b>4</b><span>personas</span></div>
+            <div class="cs-stat"><b>5</b><span>journey phases</span></div>
+            <div class="cs-stat"><b>1</b><span>hi-fi prototype</span></div>
+          </div>
+
+          <ol class="cs-insights">
+            <li class="has-sketch"><span class="n">01</span><div><h4>Kids learn by making.</h4><p>The ritual of collecting, building, and keeping something beats being told why it matters.</p></div>
+              <div class="sketch-mini" aria-hidden="true">
+                <svg viewBox="0 0 150 96" role="img">
+                  <!-- learning by making — building blocks -->
+                  <rect x="34" y="50" width="24" height="24" rx="2"/>
+                  <rect x="62" y="50" width="24" height="24" rx="2"/>
+                  <rect x="48" y="26" width="24" height="24" rx="2"/>
+                  <path d="M100 30 l2.5 6 l6 0 l-5 4.5 l2 6 l-5.5 -3.5 l-5.5 3.5 l2 -6 l-5 -4.5 l6 0 z"/>
+                </svg>
+              </div>
+            </li>
+            <li class="has-sketch"><span class="n">02</span><div><h4>Parents want it to feel real.</h4><p>They favour experiences with an educational, non-screen-first core.</p></div>
+              <div class="sketch-mini" aria-hidden="true">
+                <svg viewBox="0 0 150 96" role="img">
+                  <!-- parent + child, hands-on (not a screen) -->
+                  <circle cx="34" cy="28" r="11"/>
+                  <path d="M17 64 q5 -19 17 -19 q12 0 17 19"/>
+                  <circle cx="66" cy="40" r="8"/>
+                  <path d="M53 66 q4 -14 13 -14 q9 0 13 14"/>
+                  <rect x="96" y="44" width="20" height="30" rx="3"/>
+                  <path d="M98 46 l16 26 M114 46 l-16 26"/>
+                </svg>
+              </div>
+            </li>
+            <li class="has-sketch"><span class="n">03</span><div><h4>Keepsakes create reflection.</h4><p>Turning a creation into something to keep and show drives the kind of pride that makes the lesson last.</p></div>
+              <div class="sketch-mini" aria-hidden="true">
+                <svg viewBox="0 0 150 96" role="img">
+                  <!-- a kept, framed creation — keepsake -->
+                  <rect x="34" y="28" width="46" height="46" rx="4"/>
+                  <path d="M57 64 c -7 -7 -16 -3 -16 4 c 0 7 16 14 16 14 c 0 0 16 -7 16 -14 c 0 -7 -9 -11 -16 -4 z" transform="translate(0,-8) scale(0.62) translate(35,18)"/>
+                  <path d="M92 34 l1.5 5 M100 40 l4 -3 M96 52 l5 2"/>
+                </svg>
+              </div>
+            </li>
+          </ol>
+
+          <figure class="img-block reveal">
+            <img src="../assets/images/projects/trash-to-treasure/02.png" alt="Empathy maps and four personas" />
+            <figcaption class="img-caption">Empathy maps and four personas synthesised from interviews — humanising kids and parents into distinct mindsets.</figcaption>
+          </figure>
+        </div>
+
+        <!-- Define -->
+        <div class="cs-section reveal">
+          <span class="section-label">03 — Define</span>
+          <h2 class="project-heading">Mapping the day before the app.</h2>
+
+          <ol class="cs-principles">
+            <li><h4>Learn by making</h4><p>Every lesson is a thing the child builds with their hands.</p></li>
+            <li><h4>Reward progress, not perfection</h4><p>Badges and levels celebrate the trying, not the result.</p></li>
+            <li><h4>Bridge screen and real world</h4><p>The phone guides; the making happens off it.</p></li>
+          </ol>
+
+          <figure class="img-block img-block--full reveal">
+            <img src="../assets/images/projects/trash-to-treasure/03.png" alt="End-to-end user journey map across five phases" />
+            <figcaption class="img-caption">The journey across five phases — Before Use, Setup, Engagement, Sharing &amp; Feedback, Growth &amp; Reuse — with feelings, pain points, and opportunities at each step.</figcaption>
+          </figure>
+
+          <figure class="img-block reveal">
+            <img src="../assets/images/projects/trash-to-treasure/04.png" alt="User flow and information architecture" />
+            <figcaption class="img-caption">User flow translated into an information architecture — Home → Items Manager, Live Data Dashboard, and Project Information.</figcaption>
+          </figure>
+        </div>
+
+        <!-- Ideate → Design -->
+        <div class="cs-section reveal">
+          <span class="section-label">04 — Ideate → Design</span>
+          <h2 class="project-heading">Three ways to play, one habit to build.</h2>
+          <div class="project-text">
+            <p>
+              The app resolves into three modes: a Story Mode that teaches through adventure and badges, a Gallery Mode to pick a project to build, and a voice-assisted Step-by-Step Guide for kids who can't yet read fluently.
+            </p>
+          </div>
+
+          <div class="sketch-row">
+            <div class="sketch-method">
+              <svg viewBox="0 0 120 96" role="img" aria-hidden="true">
+                <rect x="40" y="12" width="40" height="72" rx="6"/>
+                <rect x="46" y="20" width="28" height="24" rx="2"/>
+                <circle cx="50" cy="54" r="2" data-fill/>
+                <circle cx="60" cy="54" r="2"/>
+                <circle cx="70" cy="54" r="2"/>
+                <path d="M48 64 h24 M48 70 h16"/>
+              </svg>
+              <span class="sketch-method__label"><b>Story Mode</b>adventure + badges</span>
+            </div>
+            <div class="sketch-method">
+              <svg viewBox="0 0 120 96" role="img" aria-hidden="true">
+                <rect x="40" y="12" width="40" height="72" rx="6"/>
+                <rect x="46" y="20" width="12" height="12" rx="1.5"/>
+                <rect x="62" y="20" width="12" height="12" rx="1.5"/>
+                <rect x="46" y="36" width="12" height="12" rx="1.5"/>
+                <rect x="62" y="36" width="12" height="12" rx="1.5"/>
+                <path d="M46 58 h28 M46 64 h20 M46 70 h24"/>
+              </svg>
+              <span class="sketch-method__label"><b>Gallery Mode</b>pick a project to build</span>
+            </div>
+            <div class="sketch-method">
+              <svg viewBox="0 0 120 96" role="img" aria-hidden="true">
+                <rect x="40" y="12" width="40" height="72" rx="6"/>
+                <path d="M48 44 v6 M53 38 v18 M58 32 v30 M63 38 v18 M68 42 v10 M72 46 v4"/>
+                <circle cx="52" cy="70" r="2" data-fill/>
+                <circle cx="60" cy="70" r="2" data-fill/>
+                <circle cx="68" cy="70" r="2" data-fill/>
+              </svg>
+              <span class="sketch-method__label"><b>Step-by-Step</b>voice-guided for pre-readers</span>
             </div>
           </div>
-          <div class="img-block glass--sm reveal">
-            <img src="../assets/images/projects/trash-to-treasure/02.png" alt="Research synthesis" />
+
+          <div class="cs-decisions">
+            <div class="cs-decision">
+              <div class="cs-decision__what">Story Mode with badges</div>
+              <div class="cs-decision__why"><span class="lab">Why</span>Narrative and visible progress turn an environmental lesson into something a child wants to continue.</div>
+            </div>
+            <div class="cs-decision">
+              <div class="cs-decision__what">Voice-assisted step-by-step</div>
+              <div class="cs-decision__why"><span class="lab">Why</span>Audio plus images and material lists let pre-readers follow along independently.</div>
+            </div>
+            <div class="cs-decision">
+              <div class="cs-decision__what">Product left out of the journey first</div>
+              <div class="cs-decision__why"><span class="lab">Why</span>Mapping real life before features kept us solving genuine needs, not justifying the app.</div>
+            </div>
           </div>
+
+          <figure class="img-block img-block--full reveal">
+            <img src="../assets/images/projects/trash-to-treasure/05.png" alt="Wireframes evolving into the hi-fi prototype" />
+            <figcaption class="img-caption">From lo-fi wireframes to a hi-fi prototype — warm, rounded, mascot-led screens for small hands.</figcaption>
+          </figure>
         </div>
 
-        <div class="img-block img-block--full reveal">
-          <img src="../assets/images/projects/trash-to-treasure/03.png" alt="Why and How — message framing" />
-        </div>
-
-        <div class="two-col two-col--narrow reveal">
-          <div>
-            <span class="section-label">Design</span>
-            <h2 class="project-heading">Story mode, not score mode.</h2>
-          </div>
+        <!-- Outcome -->
+        <div class="cs-section reveal">
+          <span class="section-label">05 — Outcome</span>
+          <h2 class="project-heading">A lesson that feels like play.</h2>
           <div class="project-text">
-            <p>
-              The app opens with a "Crafty Friend" — a plant-like character whose garden grows as a child completes upcycling missions with materials from home. Each mission is a mini narrative with a step-by-step, voice-assisted guide for kids who can't yet read comfortably.
-            </p>
-            <p>
-              A shared gallery lets siblings, classmates, and parents see each other's creations without the competition pattern typical of streaks and points.
-            </p>
+            <p>We walked the prototype through with a small group of children to check whether the modes were learnable without an adult reading every screen.</p>
+          </div>
+
+          <div class="cs-stats">
+            <div class="cs-stat"><b>4/5</b><span>completed a project unaided</span></div>
+            <div class="cs-stat"><b>3</b><span>play modes</span></div>
+            <div class="cs-stat"><b>5</b><span>journey phases designed</span></div>
+          </div>
+
+          <div class="cs-quote">
+            <blockquote>"Can I make another one? I want to show my mum the flower I grew."</blockquote>
+            <cite>— Child tester, age 7</cite>
+          </div>
+
+          <div class="cs-takeaways">
+            <div>
+              <h4>What I learned</h4>
+              <ul>
+                <li>Designing for kids means designing for the parent standing behind them.</li>
+                <li>Keeping the product out of early research kept the team honest.</li>
+                <li>Voice and image carry more than text when your user can't read yet.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>If I continued</h4>
+              <ul>
+                <li>Test the Step-by-Step Guide with a wider age range.</li>
+                <li>Add a parent dashboard for shared progress.</li>
+                <li>Prototype the physical collecting kit alongside the app.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cs-contribution">
+            <h4>My contribution</h4>
+            <p>In a team of four, I led the research synthesis and information architecture — empathy maps, journey map, and user flow — and designed the Story Mode and Step-by-Step Guide screens in the hi-fi prototype.</p>
           </div>
         </div>
 
-        <div class="img-grid img-grid--3 reveal">
-          <div><img src="../assets/images/projects/trash-to-treasure/04.png" alt="App screens — home" /></div>
-          <div><img src="../assets/images/projects/trash-to-treasure/05.png" alt="App screens — gallery" /></div>
-          <div><img src="../assets/images/projects/trash-to-treasure/02.png" alt="App screens — guide" /></div>
-        </div>
-
-        <div class="two-col reveal">
+        <a href="lively.html" class="next-project reveal" data-cursor="view">
           <div>
-            <span class="section-label">Outcome</span>
-            <h2 class="project-heading">Small hands, circular habits.</h2>
+            <div class="next-project__label">Next · 04</div>
+            <h2 class="next-project__title">Lively</h2>
           </div>
-          <div class="project-text">
-            <p>
-              Co-designed and tested with four small users across the course, Trash To Treasure was our way of arguing that sustainability education deserves the same playful craft we give premium consumer products. It's still one of my favorite team projects — an exercise in designing for a generation we rarely ask for feedback.
-            </p>
-          </div>
-        </div>
-
-        <a href="viewsonic.html" class="next-project glass reveal">
-          <div class="next-project__label">Next · 06</div>
-          <h2 class="next-project__title">ViewSonic</h2>
           <div class="next-project__arrow">→</div>
         </a>
 
@@ -128,7 +274,7 @@
     </section>
 
     <footer class="footer">
-      <p>© 2026 Shao-Yu Lin · <a href="../index.html">Back to work</a></p>
+      <div class="wrap">© 2026 Shao-Yu Lin · <a href="../index.html">Back to work</a></div>
     </footer>
   </main>
 

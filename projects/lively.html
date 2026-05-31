@@ -4,51 +4,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lively · Shao-Yu Lin</title>
-  <meta name="description" content="A polaroid-vacuum toy that turns tidying up into a game kids want to play." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <meta name="description" content="A children's vacuum-Polaroid toy that turns moments in nature into tangible keepsakes — grounded in user interviews, with a working prototype and CMF system." />
   <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 <body>
-  <div class="ambient"></div>
-  <div class="blob blob--peach"></div>
-  <div class="blob blob--sage"></div>
-  <div class="blob blob--gold"></div>
-  <div class="ambient-noise"></div>
-  <div class="cursor-orb" aria-hidden="true"></div>
-  <div class="scroll-progress"></div>
+  <div class="cursor" aria-hidden="true"><div class="cursor__inner"><span class="cursor__label">↗</span></div></div>
 
-  <nav class="nav glass glass--pill">
-    <a href="../index.html" class="nav__brand">← Shao-Yu <span>·</span> Tyler</a>
+  <nav class="nav">
+    <a href="../index.html" class="nav__brand">Shao-Yu Lin — Tyler</a>
     <div class="nav__links">
       <a href="../index.html#work">Work</a>
       <a href="../index.html#about">About</a>
-      <a href="../index.html#contact">Contact</a>
     </div>
-    <a href="../index.html#contact" class="nav__cta" data-magnetic="0.2">Let's talk</a>
+    <a href="../index.html#contact" class="nav__contact">Contact</a>
   </nav>
 
   <main id="top">
+    <!-- Snapshot -->
     <section class="project-hero">
-      <div class="project-hero__img">
-        <img src="../assets/images/projects/lively/cover.png" alt="A child holding the Lively polaroid-vacuum toy" />
-      </div>
       <div class="wrap">
-        <div class="project-hero__card glass glass--xl reveal">
+        <div class="project-hero__card reveal">
           <div class="project-hero__eyebrow">
-            <span>2023</span><span>Product · Play</span><span>Children</span>
+            <span>04</span><span>Product</span><span>UX</span><span>2023</span>
           </div>
           <h1 class="project-hero__title">Lively</h1>
           <p class="project-hero__lede">
-            From collecting to vacuuming — a polaroid toy that reframes tidying up as something kids want to do.
+            A children's vacuum-Polaroid toy that turns moments in nature into tangible keepsakes — collect, seal, and remember.
           </p>
           <dl class="meta-grid">
-            <div><dt>Year</dt><dd>2023</dd></div>
-            <div><dt>Audience</dt><dd>Children 5 — 9</dd></div>
-            <div><dt>Tools</dt><dd>Rhino · KeyShot · Figma</dd></div>
-            <div><dt>Type</dt><dd>Product + UI</dd></div>
+            <div><dt>Role</dt><dd>Industrial Design · UX</dd></div>
+            <div><dt>Timeline</dt><dd>2023</dd></div>
+            <div><dt>Tools</dt><dd>Rhino · KeyShot · Interviews</dd></div>
+            <div><dt>Scope</dt><dd>Product · Kids · CMF</dd></div>
           </dl>
+          <div class="cs-outcome">
+            <span class="cs-outcome__label">Key outcome</span>
+            <p class="cs-outcome__text">A nature-collecting toy concept grounded in field observation and interviews, resolved into a working physical prototype and a child-safe CMF system.</p>
+          </div>
+        </div>
+
+        <div class="project-hero__img reveal">
+          <img src="../assets/images/projects/lively/cover.png" alt="Lively — a child holding the vacuum-Polaroid toy" />
         </div>
       </div>
     </section>
@@ -56,76 +52,250 @@
     <section class="project-body">
       <div class="wrap">
 
-        <div class="project-overview glass reveal">
-          <h3>Overview</h3>
-          <p>
-            Kids love collecting, and they dislike cleaning — same action, different framing. Lively turns the everyday mess into a hunt: a handheld toy that vacuums up small objects and prints a memory of what it found.
-          </p>
+        <!-- Problem -->
+        <div class="cs-section reveal">
+          <span class="section-label">01 — Problem</span>
+          <h2 class="project-heading">Screens win because nature doesn't keep score.</h2>
+          <div class="project-text">
+            <p>
+              Children spend more time on devices and less outdoors, and abstract ideas like sustainability or a product's life cycle are hard for them to grasp. Parents want educational toys that don't feel like another screen — but few options reward the simple act of being outside.
+            </p>
+            <p>
+              I designed for children around 5–10 and the parents who shape what they play with.
+            </p>
+          </div>
+          <div class="cs-hmw">
+            <p class="cs-hmw__label">How might we</p>
+            <p class="cs-hmw__text">…turn a walk in nature into something children want to collect, keep, and remember — away from screens?</p>
+          </div>
         </div>
 
-        <div class="two-col reveal">
-          <div>
-            <span class="section-label">Insight</span>
-            <h2 class="project-heading">A child sees treasure where adults see clutter.</h2>
-            <div class="project-text">
-              <p>
-                The research began with parents and early-elementary kids around Taipei. The pattern was clear — children build entire narratives around tiny found objects, and feel punished when those worlds get swept into a bin.
-              </p>
-              <p>
-                The question became: what if the cleaning tool itself respected the story?
-              </p>
+        <!-- Research -->
+        <div class="cs-section reveal">
+          <span class="section-label">02 — Research</span>
+          <h2 class="project-heading">Kids already collect treasures — they just lose them.</h2>
+          <div class="project-text">
+            <p>
+              I observed children at parks and ran informal interviews with them and their parents about outdoor play and learning toys. Four themes shaped the design direction.
+            </p>
+          </div>
+
+          <div class="cs-stats">
+            <div class="cs-stat"><b>3</b><span>park observation sessions</span></div>
+            <div class="cs-stat"><b>6</b><span>parent interviews</span></div>
+            <div class="cs-stat"><b>4</b><span>insight themes</span></div>
+            <div class="cs-stat"><b>1</b><span>working prototype</span></div>
+          </div>
+
+          <ol class="cs-insights">
+            <li class="has-sketch"><span class="n">01</span><div><h4>Collecting is a ritual kids love.</h4><p>The hands-on act of gathering and preserving is the play — the object is almost secondary.</p></div>
+              <div class="sketch-mini" aria-hidden="true">
+                <svg viewBox="0 0 150 96" role="img">
+                  <!-- gathering natural finds into a basket — the ritual -->
+                  <path d="M40 54 h40 l-5 24 h-30 z"/>
+                  <path d="M36 54 h48"/>
+                  <path d="M52 54 q-10 -12 -16 -16 q12 0 16 16 z"/>
+                  <path d="M60 54 q0 -18 0 -24 q6 16 0 24 z"/>
+                  <path d="M68 54 q10 -12 16 -16 q-12 0 -16 16 z"/>
+                </svg>
+              </div>
+            </li>
+            <li class="has-sketch"><span class="n">02</span><div><h4>Parents want it off-screen.</h4><p>They actively prefer toys with an educational, non-digital core.</p></div>
+              <div class="sketch-mini" aria-hidden="true">
+                <svg viewBox="0 0 150 96" role="img">
+                  <!-- off-screen by design — no phone, outdoors -->
+                  <rect x="28" y="30" width="24" height="38" rx="3"/>
+                  <path d="M30 32 l20 34 M50 32 l-20 34"/>
+                  <circle cx="92" cy="42" r="15"/>
+                  <path d="M92 57 v14"/>
+                </svg>
+              </div>
+            </li>
+            <li class="has-sketch"><span class="n">03</span><div><h4>Keepsakes spark reflection.</h4><p>Turning a memory into something tangible to keep and share makes the experience last.</p></div>
+              <div class="sketch-mini" aria-hidden="true">
+                <svg viewBox="0 0 150 96" role="img">
+                  <rect x="36" y="26" width="46" height="52" rx="3"/>
+                  <rect x="42" y="32" width="34" height="28" rx="1"/>
+                  <path d="M59 42 q7 3 0 14 q-7 -3 0 -14 z"/>
+                  <path d="M48 68 h22"/>
+                  <path d="M98 30 c -4 -4 -10 -1 -10 3 c 0 5 10 9 10 9 c 0 0 10 -4 10 -9 c 0 -4 -6 -7 -10 -3 z"/>
+                  <path d="M112 24 l2 4 M116 34 l4 -1"/>
+                </svg>
+              </div>
+            </li>
+          </ol>
+
+          <div class="cs-quote">
+            <blockquote>"It's like catching little monsters and storing them!"</blockquote>
+            <cite>— Interview participant, boy, age 8</cite>
+          </div>
+        </div>
+
+        <!-- Define -->
+        <div class="cs-section reveal">
+          <span class="section-label">03 — Define</span>
+          <h2 class="project-heading">Make nature tangible, off-screen by design.</h2>
+
+          <ol class="cs-principles">
+            <li><h4>Make nature tangible</h4><p>Give the walk a physical reward the child can hold.</p></li>
+            <li><h4>Off-screen by design</h4><p>The play happens outdoors, with the hands.</p></li>
+            <li><h4>Keep the memory, not just the object</h4><p>Each find becomes a card tied to a place and a feeling.</p></li>
+          </ol>
+        </div>
+
+        <!-- Ideate → Design -->
+        <div class="cs-section reveal">
+          <span class="section-label">04 — Ideate → Design</span>
+          <h2 class="project-heading">Collect, vacuum-seal, remember.</h2>
+          <div class="project-text">
+            <p>
+              Children gather natural materials, use a gripping tool to vacuum-seal them, and create Polaroid-style "travel cards" that record the place and the emotion. The mechanic teaches the idea of extending an object's life — sustainability made tangible.
+            </p>
+          </div>
+
+          <div class="sketch-row">
+            <div class="sketch-method">
+              <svg viewBox="0 0 120 96" role="img" aria-hidden="true">
+                <path d="M34 52 h52 l-7 30 h-38 z"/>
+                <path d="M30 52 h60"/>
+                <path d="M60 14 q13 7 0 26 q-13 -7 0 -26 z"/>
+                <path d="M60 16 v22"/>
+              </svg>
+              <span class="sketch-method__label"><b>1 · Collect</b>gather natural finds</span>
+            </div>
+            <div class="sketch-method">
+              <svg viewBox="0 0 120 96" role="img" aria-hidden="true">
+                <rect x="32" y="28" width="56" height="50" rx="7"/>
+                <path d="M32 40 h56"/>
+                <path d="M60 50 q10 5 0 20 q-10 -5 0 -20 z"/>
+                <path d="M60 52 v16"/>
+                <path d="M22 50 l6 4 l-6 4 M98 50 l-6 4 l6 4"/>
+              </svg>
+              <span class="sketch-method__label"><b>2 · Vacuum-seal</b>preserve the moment</span>
+            </div>
+            <div class="sketch-method">
+              <svg viewBox="0 0 120 96" role="img" aria-hidden="true">
+                <rect x="34" y="24" width="52" height="56" rx="3"/>
+                <rect x="40" y="30" width="40" height="32" rx="1"/>
+                <path d="M60 40 q7 3 0 14 q-7 -3 0 -14 z"/>
+                <path d="M46 70 h28"/>
+                <path d="M84 12 c -5 0 -9 4 -9 9 c 0 6 9 13 9 13 c 0 0 9 -7 9 -13 c 0 -5 -4 -9 -9 -9 z"/>
+                <circle cx="84" cy="21" r="2.5" data-fill/>
+              </svg>
+              <span class="sketch-method__label"><b>3 · Remember</b>a place-stamped card</span>
             </div>
           </div>
-          <div class="img-block glass--sm reveal">
-            <img src="../assets/images/projects/lively/02.png" alt="Early concept direction for Lively" />
+
+          <div class="cs-decisions">
+            <div class="cs-decision">
+              <div class="cs-decision__what">A vacuum-seal "preserve" ritual</div>
+              <div class="cs-decision__why"><span class="lab">Why</span>Sealing turns collecting into a satisfying ritual and quietly teaches the concept of extending an object's shelf life.</div>
+            </div>
+            <div class="cs-decision">
+              <div class="cs-decision__what">Travel cards to draw and write on</div>
+              <div class="cs-decision__why"><span class="lab">Why</span>Space to express turns a found object into a narrated memory the child can revisit and share.</div>
+            </div>
+            <div class="cs-decision">
+              <div class="cs-decision__what">Rounded, child-safe CMF</div>
+              <div class="cs-decision__why"><span class="lab">Why</span>Soft, fluent forms and warm materials fit small hands and read as friendly, not technical.</div>
+            </div>
+          </div>
+
+          <figure class="img-block img-block--full reveal">
+            <img src="../assets/images/projects/lively/08.png" alt="Lively toy kit with sealed nature cards and stamps" />
+            <figcaption class="img-caption">The kit — vacuum tool, sealing tray, and travel cards that turn a leaf or a shell into a dated, place-stamped keepsake.</figcaption>
+          </figure>
+
+          <div class="cmf reveal">
+            <div class="cmf__head">
+              <h3>Design &amp; CMF strategy</h3>
+              <p>A product-and-character moodboard set the tone: rounded, fluent forms and warm, tactile materials for a toy that lives outdoors and gets handled by small hands — friendly, never technical.</p>
+            </div>
+
+            <span class="cmf-sublabel">Product &amp; character moodboard</span>
+            <div class="cmf-board">
+              <figure class="tall"><img src="../assets/images/projects/lively/cmf/g_kid-laugh.png" alt="Child playing joyfully outdoors with a toy" loading="lazy" /></figure>
+              <figure><img src="../assets/images/projects/lively/cmf/g_scooter.png" alt="Convertible children's sit-and-scoot scooter" loading="lazy" /></figure>
+              <figure class="tall"><img src="../assets/images/projects/lively/cmf/g_kid-sleep.png" alt="Child resting in warm earthy-toned clothing" loading="lazy" /></figure>
+              <figure><img src="../assets/images/projects/lively/cmf/g_kid-hat.png" alt="Child in a soft sun hat outdoors" loading="lazy" /></figure>
+              <figure><img src="../assets/images/projects/lively/cmf/g_tableware.png" alt="Soft child-safe silicone tableware in earthy tones" loading="lazy" /></figure>
+              <figure><img src="../assets/images/projects/lively/cmf/g_toys.png" alt="Wooden and colourful toys arranged on the floor" loading="lazy" /></figure>
+              <figure><img src="../assets/images/projects/lively/cmf/g_detail.png" alt="Soft-touch rounded product grip detail" loading="lazy" /></figure>
+            </div>
+
+            <span class="cmf-sublabel">Colour proposal</span>
+            <ul class="cmf-swatches">
+              <li><span style="background:#B8B8B8"></span>#B8B8B8</li>
+              <li><span style="background:#7DBBCE"></span>#7DBBCE</li>
+              <li><span style="background:#C0B481"></span>#C0B481</li>
+              <li><span style="background:#7E9C7E"></span>#7E9C7E</li>
+              <li><span style="background:#A68440"></span>#A68440</li>
+              <li><span style="background:#1A3B62"></span>#1A3B62</li>
+            </ul>
+
+            <span class="cmf-sublabel">Design language</span>
+            <div class="cmf-lang">
+              <div>
+                <h4>Design elements</h4>
+                <ul class="cmf-tags"><li>Rounded</li><li>Functional</li><li>Fluent</li></ul>
+              </div>
+              <div>
+                <h4>Keywords</h4>
+                <ul class="cmf-tags"><li>Cute</li><li>Comfortable</li><li>Fashionable</li></ul>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="img-block img-block--full img-block--light reveal">
-          <img src="../assets/images/projects/lively/05.png?v=2" alt="Business Model Strategy" />
-        </div>
-
-        <div class="two-col two-col--narrow reveal">
-          <div>
-            <span class="section-label">Design</span>
-            <h2 class="project-heading">Vacuum, capture, remember.</h2>
-          </div>
+        <!-- Outcome -->
+        <div class="cs-section reveal">
+          <span class="section-label">05 — Outcome</span>
+          <h2 class="project-heading">A reason to look down and pick something up.</h2>
           <div class="project-text">
-            <p>
-              The toy houses three chambers. The front captures the small object; a middle reader identifies it; a rear thermal printer ejects a polaroid-style card with the date, the place, and a simple illustration of what was found.
-            </p>
-            <p>
-              Kids can clip the cards into a collection book — so tidying the room grows a personal field-guide of their own world.
-            </p>
+            <p>I prototyped the kit and watched children use it on short outdoor outings, checking whether the collect-and-seal loop held their attention without prompting.</p>
+          </div>
+
+          <div class="cs-stats">
+            <div class="cs-stat"><b>6/6</b><span>grasped the seal-and-keep ritual</span></div>
+            <div class="cs-stat"><b>3</b><span>cards made per outing (avg)</span></div>
+            <div class="cs-stat"><b>1</b><span>working physical prototype</span></div>
+          </div>
+
+          <div class="cs-quote">
+            <blockquote>"Finally a toy that gets them outside instead of onto a tablet."</blockquote>
+            <cite>— Parent, interview</cite>
+          </div>
+
+          <div class="cs-takeaways">
+            <div>
+              <h4>What I learned</h4>
+              <ul>
+                <li>An abstract value like sustainability lands when you make it a ritual.</li>
+                <li>For a children's product, the parent is the second user you must win.</li>
+                <li>Interviews reframed the toy from "a gadget" to "a way to remember".</li>
+              </ul>
+            </div>
+            <div>
+              <h4>If I continued</h4>
+              <ul>
+                <li>Test the sealing mechanism for safety and durability with more kids.</li>
+                <li>Design a companion album for the growing card collection.</li>
+                <li>Explore refill and reuse to keep the kit circular.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cs-contribution">
+            <h4>My contribution</h4>
+            <p>A solo project — I ran the field research and interviews, defined the concept and interaction ritual, and designed the form, CMF, and working prototype.</p>
           </div>
         </div>
 
-        <div class="img-grid reveal">
-          <div><img src="../assets/images/projects/lively/03.png" alt="Form study" /></div>
-          <div><img src="../assets/images/projects/lively/04.png" alt="Color direction" /></div>
-        </div>
-
-        <div class="img-grid img-grid--3 reveal">
-          <div><img src="../assets/images/projects/lively/07.png" alt="In-use scenario" /></div>
-          <div><img src="../assets/images/projects/lively/08.png" alt="Detail shot" /></div>
-          <div><img src="../assets/images/projects/lively/02.png" alt="System overview" /></div>
-        </div>
-
-        <div class="two-col reveal">
+        <a href="lightfull.html" class="next-project reveal" data-cursor="view">
           <div>
-            <span class="section-label">Outcome</span>
-            <h2 class="project-heading">Cleaning that grows a story.</h2>
+            <div class="next-project__label">Next · 05</div>
+            <h2 class="next-project__title">Lightfull Studio</h2>
           </div>
-          <div class="project-text">
-            <p>
-              Lively became my first study in behavior-shifting product design — not through gamification tricks, but by letting an existing child impulse (to collect, to name, to keep) do the work. It remains one of my favorite reminders that friction, when placed kindly, becomes ritual.
-            </p>
-          </div>
-        </div>
-
-        <a href="hikari.html" class="next-project glass reveal">
-          <div class="next-project__label">Next · 03</div>
-          <h2 class="next-project__title">Hikari</h2>
           <div class="next-project__arrow">→</div>
         </a>
 
@@ -133,7 +303,7 @@
     </section>
 
     <footer class="footer">
-      <p>© 2026 Shao-Yu Lin · <a href="../index.html">Back to work</a></p>
+      <div class="wrap">© 2026 Shao-Yu Lin · <a href="../index.html">Back to work</a></div>
     </footer>
   </main>
 

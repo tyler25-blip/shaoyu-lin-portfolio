@@ -1,3 +1,6 @@
 .DS_Store
-*.log
-node_modules/
+**/.DS_Store
+
+# Intermediate AI-generation outputs and backups (not used by the site)
+**/_orig_backup/
+assets/images/projects/pangolin/_gen_*.png

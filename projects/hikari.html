@@ -4,51 +4,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hikari · Shao-Yu Lin</title>
-  <meta name="description" content="A stress-relief service for Gen Z — biometric smart ring paired with a gentle real-time support app." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <meta name="description" content="A stress-relief service for Gen Z — a biometric smart ring paired with a gentle, glanceable support app. HCI master's project: research, service design, and a hi-fi prototype." />
   <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 <body>
-  <div class="ambient"></div>
-  <div class="blob blob--peach"></div>
-  <div class="blob blob--sage"></div>
-  <div class="blob blob--gold"></div>
-  <div class="ambient-noise"></div>
-  <div class="cursor-orb" aria-hidden="true"></div>
-  <div class="scroll-progress"></div>
+  <div class="cursor" aria-hidden="true"><div class="cursor__inner"><span class="cursor__label">↗</span></div></div>
 
-  <nav class="nav glass glass--pill">
-    <a href="../index.html" class="nav__brand">← Shao-Yu <span>·</span> Tyler</a>
+  <nav class="nav">
+    <a href="../index.html" class="nav__brand">Shao-Yu Lin — Tyler</a>
     <div class="nav__links">
       <a href="../index.html#work">Work</a>
       <a href="../index.html#about">About</a>
-      <a href="../index.html#contact">Contact</a>
     </div>
-    <a href="../index.html#contact" class="nav__cta" data-magnetic="0.2">Let's talk</a>
+    <a href="../index.html#contact" class="nav__contact">Contact</a>
   </nav>
 
   <main id="top">
+    <!-- Snapshot -->
     <section class="project-hero">
-      <div class="project-hero__img">
-        <img src="../assets/images/projects/hikari/cover.png" alt="Hikari app screens and smart ring" />
-      </div>
       <div class="wrap">
-        <div class="project-hero__card glass glass--xl reveal">
+        <div class="project-hero__card reveal">
           <div class="project-hero__eyebrow">
-            <span>2025</span><span>Service · UI/UX</span><span>Wellbeing</span>
+            <span>02</span><span>UX / UI</span><span>HCI · Service</span><span>2025</span>
           </div>
           <h1 class="project-hero__title">Hikari</h1>
           <p class="project-hero__lede">
-            A stress-relief service for Gen Z — biometric smart ring meets a quietly present support app.
+            A stress-relief service for Gen Z — a biometric smart ring meets a quietly present support app that catches rising stress before it peaks.
           </p>
           <dl class="meta-grid">
-            <div><dt>Year</dt><dd>2025</dd></div>
-            <div><dt>Audience</dt><dd>Gen Z · 18 — 26</dd></div>
+            <div><dt>Role</dt><dd>Solo · UX, UI &amp; ID</dd></div>
+            <div><dt>Timeline</dt><dd>2025 · M.A. HCI</dd></div>
             <div><dt>Tools</dt><dd>Figma · Rhino · KeyShot</dd></div>
             <div><dt>Scope</dt><dd>Service · Wearable · App</dd></div>
           </dl>
+          <div class="cs-outcome">
+            <span class="cs-outcome__label">Key outcome</span>
+            <p class="cs-outcome__text">A complete service concept — smart ring plus companion app — with a hi-fi prototype and a stress-to-interface mapping system, concept-tested with 5 teens.</p>
+          </div>
+        </div>
+
+        <div class="project-hero__img reveal">
+          <img src="../assets/images/projects/hikari/cover.png" alt="Hikari app screens and smart ring" />
         </div>
       </div>
     </section>
@@ -56,78 +52,222 @@
     <section class="project-body">
       <div class="wrap">
 
-        <div class="project-overview glass reveal">
-          <h3>Overview</h3>
-          <p>
-            Hikari — "light" in Japanese — is a stress-relief service built around one simple idea: by the time you <em>feel</em> stressed, your body has already been trying to tell you for hours. A smart ring senses the early signals; a companion app turns them into gentle, real-time support.
-          </p>
+        <!-- Problem -->
+        <div class="cs-section reveal">
+          <span class="section-label">01 — Problem</span>
+          <h2 class="project-heading">The generation that knows about stress, and drowns in it anyway.</h2>
+          <div class="project-text">
+            <p>
+              Gen Z is the most mental-health-literate generation we've had, and the most anxious. Existing wellness apps ask for attention at exactly the moment there's none to spare — a journal prompt, a five-minute breathwork flow — and unmanaged teenage stress quietly compounds into physical and chronic illness.
+            </p>
+            <p>
+              I designed for teenagers aged 12–18 in Germany — secondary-school students, social-media natives, with an attention window measured in seconds.
+            </p>
+          </div>
+          <div class="cs-hmw">
+            <p class="cs-hmw__label">How might we</p>
+            <p class="cs-hmw__text">…help teenagers notice rising stress before it peaks — without asking for attention they don't have?</p>
+          </div>
         </div>
 
-        <div class="two-col reveal">
-          <div>
-            <span class="section-label">Problem</span>
-            <h2 class="project-heading">The generation that knows about stress, and drowns in it anyway.</h2>
-            <div class="project-text">
-              <p>
-                Gen Z is the most mental-health-literate generation we've ever had, and the most anxious. Existing wellness apps ask for attention at exactly the moment there's none to spare — a reflection exercise, a journal prompt, a five-minute breathwork flow.
-              </p>
-              <p>
-                Hikari starts earlier, with something quieter: the body.
-              </p>
+        <!-- Research -->
+        <div class="cs-section reveal">
+          <span class="section-label">02 — Research</span>
+          <h2 class="project-heading">By the time you feel stressed, your body has been signalling for hours.</h2>
+          <div class="project-text">
+            <p>
+              I combined interviews with teens and supporters, secondary research into stress physiology — toxic stress, biological embedding, physiological dysregulation — and a stakeholder map that narrowed focus to those directly affected and the people around them.
+            </p>
+          </div>
+
+          <div class="cs-stats">
+            <div class="cs-stat"><b>8</b><span>interviews</span></div>
+            <div class="cs-stat"><b>3</b><span>stakeholder groups</span></div>
+            <div class="cs-stat"><b>4</b><span>biometric signals</span></div>
+            <div class="cs-stat"><b>~15s</b><span>teen attention window</span></div>
+          </div>
+
+          <ol class="cs-insights">
+            <li class="has-sketch"><span class="n">01</span><div><h4>The body speaks first.</h4><p>Physiological stress signals appear long before a teen consciously feels "stressed" — an opening for prevention rather than treatment.</p></div>
+              <div class="sketch-mini" aria-hidden="true">
+                <svg viewBox="0 0 150 100" role="img">
+                  <!-- physiological signal rises before conscious awareness -->
+                  <path d="M26 16 V84 M26 84 H134"/>
+                  <path d="M34 74 C 64 70, 92 52, 124 24"/>
+                  <circle cx="64" cy="62" r="3.5" data-fill/>
+                  <path d="M64 62 V84" data-dash/>
+                  <circle cx="112" cy="33" r="5"/>
+                  <path d="M112 38 V84" data-dash/>
+                  <path d="M64 18 H112" data-dash/>
+                  <path d="M70 14 l-6 4 l6 4 M106 14 l6 4 l-6 4"/>
+                </svg>
+              </div>
+            </li>
+            <li class="has-sketch"><span class="n">02</span><div><h4>Knowing isn't doing.</h4><p>Teens are fluent in mental-health language, but tools demand effort at the worst possible moment.</p></div>
+              <div class="sketch-mini" aria-hidden="true">
+                <svg viewBox="0 0 150 96" role="img">
+                  <!-- knows what to do (idea) but the box stays unchecked -->
+                  <circle cx="28" cy="40" r="14"/>
+                  <path d="M22 40 q6 -8 12 0"/>
+                  <path d="M22 55 h12 M24 60 h8"/>
+                  <path d="M48 50 h14" data-dash/>
+                  <path d="M74 50 h14"/>
+                  <path d="M86 45 l6 5 l-6 5"/>
+                  <rect x="104" y="38" width="24" height="24" rx="3"/>
+                </svg>
+              </div>
+            </li>
+            <li class="has-sketch"><span class="n">03</span><div><h4>If it isn't glanceable, it doesn't happen.</h4><p>With a ~15-second attention window, any intervention has to land in one look or be ignored.</p></div>
+              <div class="sketch-mini" aria-hidden="true">
+                <svg viewBox="0 0 150 100" role="img">
+                  <!-- a ~15s window on a long attention timeline -->
+                  <path d="M20 58 H132"/>
+                  <path d="M20 54 v8 M132 54 v8"/>
+                  <path d="M40 56 v4 M60 56 v4 M80 56 v4 M100 56 v4"/>
+                  <rect x="20" y="46" width="16" height="24" data-soft/>
+                  <rect x="20" y="46" width="16" height="24"/>
+                  <path d="M28 40 v-6"/>
+                </svg>
+              </div>
+            </li>
+          </ol>
+
+          <div class="cs-quote">
+            <blockquote>"I only realise I'm stressed when I'm already crying over homework. By then it's too late to 'do a breathing exercise'."</blockquote>
+            <cite>— Interview participant, 16</cite>
+          </div>
+        </div>
+
+        <!-- Define -->
+        <div class="cs-section reveal">
+          <span class="section-label">03 — Define</span>
+          <h2 class="project-heading">Sense before asking.</h2>
+
+          <div class="cs-persona">
+            <div class="cs-persona__id">
+              <p class="name">Tim, 16</p>
+              <p class="tag">Secondary school · Germany</p>
+            </div>
+            <div>
+              <p class="cs-persona__bio">Juggles exams, group chats, and an uncertain future. Cares about wellbeing in theory, but in the moment he's overwhelmed and out of patience for anything that feels like homework.</p>
+              <div class="cs-persona__cols">
+                <div>
+                  <h5>Goals</h5>
+                  <ul>
+                    <li>Stay ahead of burnout</li>
+                    <li>Understand his own patterns</li>
+                    <li>Help that fits his day</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5>Frustrations</h5>
+                  <ul>
+                    <li>Apps that demand time</li>
+                    <li>Noticing stress too late</li>
+                    <li>Advice that feels generic</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="img-block glass--sm reveal">
-            <img src="../assets/images/projects/hikari/02.png" alt="Hikari research synthesis" />
-          </div>
+
+          <ol class="cs-principles">
+            <li><h4>Sense, don't ask</h4><p>Start from the body's signals, not a daily check-in.</p></li>
+            <li><h4>Glanceable, never demanding</h4><p>Every nudge is sized for a 15-second moment.</p></li>
+            <li><h4>Prevention over treatment</h4><p>Catch the rise, not the crisis.</p></li>
+          </ol>
+
+          <figure class="img-block reveal">
+            <img src="../assets/images/projects/hikari/04.png" alt="Hikari smart ring sensing heart rate, blood oxygen, temperature, and electrodermal activity" />
+            <figcaption class="img-caption">The sensing layer — a ring reading heart-rate variability, blood-oxygen, skin temperature, and electrodermal activity (the body's stress tell).</figcaption>
+          </figure>
         </div>
 
-        <div class="img-block img-block--full reveal">
-          <img src="../assets/images/projects/hikari/04.png" alt="App flow overview" />
-        </div>
-
-        <div class="two-col two-col--narrow reveal">
-          <div>
-            <span class="section-label">System</span>
-            <h2 class="project-heading">A ring, a nudge, a pause.</h2>
-          </div>
+        <!-- Ideate → Design -->
+        <div class="cs-section reveal">
+          <span class="section-label">04 — Ideate → Design</span>
+          <h2 class="project-heading">A ring, a nudge, a pause.</h2>
           <div class="project-text">
             <p>
-              The ring continuously reads heart-rate variability, skin temperature, and breathing rhythm. When a pattern suggests rising stress, the app surfaces one small action sized for the moment — a 30-second breath, a shift in posture, a message from the loved one you've asked to be reminded of.
+              The ring continuously reads the body; when a pattern suggests rising stress, the app surfaces one small action sized for the moment — a 30-second breath, a shift in posture, a message from someone who matters. "kāri," a soft companion character, guides without lecturing.
             </p>
-            <p>
-              Nothing demanding. Nothing performative. Just light, moved slightly closer.
-            </p>
+          </div>
+
+          <div class="cs-decisions">
+            <div class="cs-decision">
+              <div class="cs-decision__what">Biometric-first sensing</div>
+              <div class="cs-decision__why"><span class="lab">Why</span>Reading the body removes the need for a teen to self-report — the intervention can begin before they consciously notice stress.</div>
+            </div>
+            <div class="cs-decision">
+              <div class="cs-decision__what">One action, sized for the moment</div>
+              <div class="cs-decision__why"><span class="lab">Why</span>A Stress button, Journal, Calendar, and the kāri buddy each offer a single glanceable step — never a queue of tasks.</div>
+            </div>
+            <div class="cs-decision">
+              <div class="cs-decision__what">Stress-mapped colour system</div>
+              <div class="cs-decision__why"><span class="lab">Why</span>The interface darkens as stress rises and lifts toward soft lilac as it eases, making an invisible state visible at a glance.</div>
+            </div>
+          </div>
+
+          <figure class="img-block img-block--full reveal">
+            <img src="../assets/images/projects/hikari/05.png" alt="Hikari app UI — home, vitals, suggestions, calendar, breathing" />
+          </figure>
+
+          <div class="img-grid reveal">
+            <div><img src="../assets/images/projects/hikari/06.png" alt="Hikari features — stress button, journal, calendar, kāri buddy" /></div>
+            <div><img src="../assets/images/projects/hikari/07.png" alt="Hikari guided breathing exercises" /></div>
           </div>
         </div>
 
-        <div class="img-grid reveal">
-          <div><img src="../assets/images/projects/hikari/03.png" alt="App UI details" /></div>
-          <div><img src="../assets/images/projects/hikari/05.png" alt="Micro-interaction studies" /></div>
-        </div>
-
-        <div class="img-block img-block--full reveal">
-          <img src="../assets/images/projects/hikari/06.png" alt="Smart ring industrial design" />
-        </div>
-
-        <div class="two-col reveal">
-          <div>
-            <span class="section-label">Outcome</span>
-            <h2 class="project-heading">Wellbeing that meets you before you ask.</h2>
-          </div>
+        <!-- Outcome -->
+        <div class="cs-section reveal">
+          <span class="section-label">05 — Outcome</span>
+          <h2 class="project-heading">Wellbeing that meets you before you ask.</h2>
           <div class="project-text">
-            <p>
-              Hikari is my ongoing exploration of ambient, AI-supported care — interfaces that earn your trust by being light on attention and heavy on timing. A concept today; a direction I plan to push further during my master's at TH Augsburg.
-            </p>
+            <p>I tested the hi-fi prototype with five teens, walking through a simulated stressful afternoon to see whether the nudges read as supportive rather than one more demand.</p>
+          </div>
+
+          <div class="cs-stats">
+            <div class="cs-stat"><b>5/5</b><span>read the nudge as supportive</span></div>
+            <div class="cs-stat"><b>4/5</b><span>grasped the colour-stress link unprompted</span></div>
+            <div class="cs-stat"><b>1</b><span>hi-fi prototype + ring concept</span></div>
+            <div class="cs-stat"><b>4</b><span>core app features</span></div>
+          </div>
+
+          <div class="cs-quote">
+            <blockquote>"It doesn't feel like an app telling me to calm down — it feels like it already knows."</blockquote>
+            <cite>— Concept-test participant, 15</cite>
+          </div>
+
+          <div class="cs-takeaways">
+            <div>
+              <h4>What I learned</h4>
+              <ul>
+                <li>Ambient, sensed care earns trust by being light on attention and heavy on timing.</li>
+                <li>For teens, tone is a feature — "knows me" beats "instructs me".</li>
+                <li>Designing the wearable and the app together kept the experience coherent.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>If I continued</h4>
+              <ul>
+                <li>Validate the stress-detection model with longitudinal biometric data.</li>
+                <li>Co-design the kāri character's voice with teens directly.</li>
+                <li>Push the concept further during my master's at TH Augsburg.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cs-contribution">
+            <h4>My contribution</h4>
+            <p>A solo project — I owned the research, the industrial design of the ring, the service architecture, and the full UI and hi-fi prototype, including the stress-to-interface colour system.</p>
           </div>
         </div>
 
-        <div class="img-block img-block--full reveal">
-          <img src="../assets/images/projects/hikari/07.png" alt="Brand and final key visual" />
-        </div>
-
-        <a href="lightfull.html" class="next-project glass reveal">
-          <div class="next-project__label">Next · 04</div>
-          <h2 class="next-project__title">Lightfull Studio</h2>
+        <a href="trash-to-treasure.html" class="next-project reveal" data-cursor="view">
+          <div>
+            <div class="next-project__label">Next · 03</div>
+            <h2 class="next-project__title">Trash to Treasure</h2>
+          </div>
           <div class="next-project__arrow">→</div>
         </a>
 
@@ -135,7 +275,7 @@
     </section>
 
     <footer class="footer">
-      <p>© 2026 Shao-Yu Lin · <a href="../index.html">Back to work</a></p>
+      <div class="wrap">© 2026 Shao-Yu Lin · <a href="../index.html">Back to work</a></div>
     </footer>
   </main>
 
