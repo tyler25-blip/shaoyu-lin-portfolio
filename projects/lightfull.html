@@ -130,19 +130,23 @@
             </div>
             <figure class="text-chart__viz">
               <svg viewBox="0 0 240 200" role="img" aria-hidden="true">
-                <path d="M120 22 l16 6 v13 c0 12 -9 18 -16 22 c-7 -4 -16 -10 -16 -22 v-13 z"/>
-                <path d="M123 33 l-9 14 h6 l-3 11 l11 -16 h-6 z" data-fill/>
-                <circle cx="196" cy="150" r="16"/>
-                <circle cx="196" cy="150" r="6"/>
-                <path d="M196 128 v7 M196 165 v7 M174 150 h7 M211 150 h7"/>
-                <circle cx="44" cy="150" r="16"/>
-                <path d="M44 140 l2.6 6 l6.6 .5 l-5 4.4 l1.6 6.5 l-5.8 -3.6 l-5.8 3.6 l1.6 -6.5 l-5 -4.4 l6.6 -.5 z" data-fill/>
-                <path d="M140 60 q44 26 52 68"/>
-                <path d="M186 122 l7 8 l-11 1"/>
-                <path d="M178 164 q-58 20 -116 0"/>
-                <path d="M74 168 l-12 -4 l9 -8"/>
-                <path d="M58 122 q18 -48 50 -70"/>
-                <path d="M104 46 l4 11 l-11 -3"/>
+                <!-- clockwise loop arcs with aligned arrowheads -->
+                <path d="M148.5 44.1 A70 70 0 0 1 189.6 115.3"/>
+                <path d="M195.1 105.8 L189.6 115.3 L186.2 104.9"/>
+                <path d="M161.1 164.6 A70 70 0 0 1 78.9 164.6"/>
+                <path d="M84.4 174.2 L78.9 164.6 L89.6 166.9"/>
+                <path d="M50.4 115.3 A70 70 0 0 1 91.5 44.1"/>
+                <path d="M80.5 44.1 L91.5 44.1 L84.2 52.2"/>
+                <!-- threat (shield + bolt) -->
+                <path d="M120 22 l14 5 v11 c0 11 -8 16 -14 19 c-6 -3 -14 -8 -14 -19 v-11 z"/>
+                <path d="M122 31 l-8 13 h5 l-3 10 l10 -15 h-5 z" data-fill/>
+                <!-- fend off (crosshair) -->
+                <circle cx="180.6" cy="143" r="15"/>
+                <circle cx="180.6" cy="143" r="5.5"/>
+                <path d="M180.6 120 v8 M180.6 158 v8 M158 143 h8 M195.2 143 h8"/>
+                <!-- reward (star) -->
+                <circle cx="59.4" cy="143" r="15"/>
+                <path d="M59.4 133 l2.6 6 l6.6 .5 l-5 4.4 l1.6 6.5 l-5.8 -3.6 l-5.8 3.6 l1.6 -6.5 l-5 -4.4 l6.6 -.5 z" data-fill/>
               </svg>
               <figcaption>Threat → fend off → reward → reset: the booth as a repeatable game loop.</figcaption>
             </figure>
